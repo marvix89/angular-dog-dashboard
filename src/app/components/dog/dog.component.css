@@ -1,0 +1,197 @@
+.dog-container{
+    position: relative;
+}
+.dog-container .side-bar{
+    text-align: center;
+    background: #f5f5f5;
+    z-index: 1000;
+    position: fixed;
+    width: 300px;
+    max-width: 100%;
+    height: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    padding: 2em 0;
+    color: rgb(123, 123, 123);
+}
+.dog-container .dogs-grid{
+    position: relative;
+    height: 100%;
+    margin-left: 300px;
+    z-index: 10;
+}
+.dog-container .dogs-list{
+    margin-top: 30px;
+    margin-left: 20px;
+}
+
+.dog-container .dogs-list.fadeIn{
+  display: block;
+}
+.dog-container .dog-search{
+    width: 250px;
+    height: 40px;
+    background: white;
+    border-radius:40px;
+    color: #555;
+    position: relative;
+    margin-left: 10px;
+    margin-top: 10px;
+    padding-left: 10px;
+    border:1px solid gray;
+    outline: none;
+}
+.dog-container .dog-item{
+    width: 200px;
+    height: 75px;
+    float: left;
+    background: white;
+    text-align: center;
+    line-height: 4.8;
+    margin: 0 20px 20px 0;
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    color: rgb(123, 123, 123);
+
+}
+.dog-container .dog-item:hover{
+    color: #333;
+    background-color:rgba(0,0,0,0.01);
+}
+.dog-container .dog-details{
+    position: absolute;
+    height: auto;
+    min-height: 100vh;
+    width: 100%;
+    background: white;
+    z-index: 20;
+}
+
+
+/*=== Trigger  ===*/
+.animate {
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+  }
+  /*=== FADE IN LEFT ===*/
+@-webkit-keyframes fadeInLeft {
+    from {
+      opacity: 0;
+      -webkit-transform: translate3d(-100%, 0, 0);
+      transform: translate3d(-100%, 0, 0);
+    }
+  
+    to {
+      opacity: 1;
+      -webkit-transform: none;
+      transform: none;
+    }
+  }
+  @keyframes fadeInLeft {
+    from {
+      opacity: 0;
+      -webkit-transform: translate3d(-100%, 0, 0);
+      transform: translate3d(-100%, 0, 0);
+    }
+  
+    to {
+      opacity: 1;
+      -webkit-transform: none;
+      transform: none;
+    }
+  }
+  
+  .fadeInLeft {
+    -webkit-animation-name: fadeInLeft;
+    animation-name: fadeInLeft;
+  }
+
+/*==== FADE IN RIGHT ===*/
+@-webkit-keyframes fadeInRight {
+    from {
+      opacity: 0;
+      -webkit-transform: translate3d(100%, 0, 0);
+      transform: translate3d(100%, 0, 0);
+    }
+  
+    to {
+      opacity: 1;
+      -webkit-transform: none;
+      transform: none;
+    }
+  }
+  @keyframes fadeInRight {
+    from {
+      opacity: 0;
+      -webkit-transform: translate3d(100%, 0, 0);
+      transform: translate3d(100%, 0, 0);
+    }
+  
+    to {
+      opacity: 1;
+      -webkit-transform: none;
+      transform: none;
+    }
+  }
+  
+  .fadeInRight {
+    -webkit-animation-name: fadeInRight;
+    animation-name: fadeInRight;
+  }
+
+   /*=== FADE OUT ===*/
+@-webkit-keyframes fadeOut {
+    from {
+      opacity: 1;
+      display: block;
+    }
+  
+    to {
+      opacity: 0;
+      display: none;
+    }
+  }
+  @keyframes fadeOut {
+    from {
+      opacity: 1;
+      display: block;
+    }
+  
+    to {
+      opacity: 0;
+      display: none;
+    }
+  }
+  
+  .fadeOut {
+    -webkit-animation-name: fadeOut;
+    animation-name: fadeOut;
+  }
+
+    /*=== FADE IN  ===*/
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.fadeIn {
+  -webkit-animation-name: fadeIn;
+  animation-name: fadeIn;
+}

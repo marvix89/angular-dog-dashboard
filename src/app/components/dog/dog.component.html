@@ -1,0 +1,21 @@
+<div class="dog-container">
+  <div class="side-bar">
+      <h1> Dogs Dashboard</h1>
+      <input class="dog-search" type="text" placeholder="search for dog breed.." [(ngModel)]="breed" />
+  </div>
+  <div class="dogs-grid">
+    <div class="dogs-list animate" [ngClass]="{'fadeOut': isOpened, 'fadeIn' :isOpened==false}"> 
+      <div (click) = "getDogImage(dog)" class="dog-item" *ngFor='let dog of dogs | filter : breed'>
+        {{dog}}
+      </div>
+      <div *ngIf="dogs && (dogs | filter : breed).length===0" class="dog-item">
+        no items available
+      </div>
+    </div>
+    <div *ngIf="dogImg && isOpened" class="dog-details animate" [ngClass]="{'fadeOut': isOpened==false, 'fadeInLeft' :isOpened}">
+        <img  [src]="dogImg" />
+        <button *ngIf="selectedBreed" (click)="getDogImage(selectedBreed)">show more dogs</button>
+        <button (click)="closeGrid()">x</button>
+    </div>  
+  </div> 
+</div>
