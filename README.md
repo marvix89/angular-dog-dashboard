@@ -1,7 +1,5 @@
 # DogDashboard
-[![Build Status][badge-travis]][travis]
-[badge-travis]: https://travis-ci.org/marvix89/dog-dashboard.svg?branch=master
-[travis]: https://travis-ci.org/marvix89/dog-dashboard
+[![Build Status](https://travis-ci.org/marvix89/dog-dashboard.svg?branch=master)](https://travis-ci.org/marvix89/dog-dashboard)
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.8.
 
