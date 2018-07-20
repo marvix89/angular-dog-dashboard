@@ -1,5 +1,6 @@
 # DogDashboard
-[![Build Status](https://travis-ci.org/marvix89/dog-dashboard.svg?branch=master)](https://travis-ci.org/marvix89/dog-dashboard)
+
+Dog Breeds Dashboard allows to search from a list of dog breeds and display dogs random images. 
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.8.
 
@@ -24,7 +25,9 @@ Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.
 Run `ng lint` to execute the code quality analysis via [tslint](https://github.com/palantir/tslint).
 
 ## Continuous integration
+[![Build Status](https://travis-ci.org/marvix89/dog-dashboard.svg?branch=master)](https://travis-ci.org/marvix89/dog-dashboard)
 
+To see the countinuous integration dashboard click on the following link:  
 https://travis-ci.org/marvix89/dog-dashboard
 
 ## Next steps
