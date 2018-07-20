@@ -1,4 +1,4 @@
-export class DogResponse{
-    status : string;
-    message : Array<string>;
+export class DogResponse {
+    status: string;
+    message: Array<string>;
 }

@@ -6,13 +6,24 @@ import { Configuration } from '../app.configuration';
 @Injectable()
 export class DogService {
 
+    /**
+    * @constructor
+    *
+    * @description The default constructor of the 'DogService' class.
+    * @param http The http client.
+    */
+    constructor(private readonly http: HttpClient) {}
 
-    constructor(private readonly http : HttpClient) {}
-
+    /**
+    * The method to retrieve dogs breeds list.
+    */
     getDogsList() {
         return this.http.get(Configuration.REST_API_URL + 'breeds/list');
     }
-    getRandomDogImg(breed : string){
-        return this.http.get(Configuration.REST_API_URL + 'breed/'+breed+'/images/random');
+    /**
+    * The method to retrieve dog image.
+    */
+    getRandomDogImg(breed: string) {
+        return this.http.get(Configuration.REST_API_URL + 'breed/' + breed + '/images/random');
     }
 }

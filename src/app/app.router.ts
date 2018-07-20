@@ -1,11 +1,11 @@
 import { NgModule } from '@angular/core';
-import {RouterModule,Routes} from '@angular/router';
+import {RouterModule, Routes} from '@angular/router';
 import { DogComponent } from './components/dog/dog.component';
 
 
 const appRoutes: Routes = [
     { path: '', component: DogComponent }
-];  
+];
 
 @NgModule({
     imports: [

@@ -18,11 +18,10 @@
 .dog-container .dogs-grid{
     position: relative;
     height: 100%;
-    margin-left: 300px;
+    margin-left: 292px;
     z-index: 10;
 }
 .dog-container .dogs-list{
-    margin-top: 30px;
     margin-left: 20px;
 }
 
@@ -30,16 +29,14 @@
   display: block;
 }
 .dog-container .dog-search{
-    width: 250px;
+    width: 220px;
     height: 40px;
     background: white;
     border-radius:40px;
     color: #555;
     position: relative;
-    margin-left: 10px;
-    margin-top: 10px;
-    padding-left: 10px;
-    border:1px solid gray;
+    padding-left: 15px;
+    border:1px solid rgba(0,0,0,0.1);
     outline: none;
 }
 .dog-container .dog-item{
@@ -48,11 +45,12 @@
     float: left;
     background: white;
     text-align: center;
-    line-height: 4.8;
+    line-height: 3.8;
     margin: 0 20px 20px 0;
     cursor: pointer;
     box-shadow: 0 5px 15px rgba(0,0,0,0.08);
     color: rgb(123, 123, 123);
+    font-size: 20px;
 
 }
 .dog-container .dog-item:hover{
@@ -66,8 +64,46 @@
     width: 100%;
     background: white;
     z-index: 20;
+    background: rgba(0,0,0,0.01);
 }
+.dog-container .dog-image-container{
+    margin-top: 30px;
+    margin-left: 30px;
+    text-align: center;
+    border: 7px dashed lightgray;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    width: 70%;
+    height: 500px;
+    float: left;
+}
+.dog-container .dog-image-container img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto
+}
+.dog-container .more-dogs{
+  margin-top: 200px;
+  margin-left: 60px;
+  float: left;
+  cursor: pointer;
+  color: rgb(123, 123, 123);
+  font-size: 30px;
 
+}
+.dog-container .close{
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  cursor: pointer;
+  color: rgb(123, 123, 123);
+  font-size: 30px;
+}
+.dog-container .close:hover,
+.dog-container .more-dogs:hover{
+  color: #333;
+}
 
 /*=== Trigger  ===*/
 .animate {

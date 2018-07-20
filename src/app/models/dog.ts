@@ -1,4 +1,4 @@
-export class Dog{
-    status : string;
-    message : string;
+export class Dog {
+    status: string;
+    message: string;
 }

@@ -1,70 +1,70 @@
-import { Component,OnInit, OnDestroy } from "@angular/core";
-import { DogService } from "../../services/dog.service";
-import { Dog } from "../../models/dog";
+import { Component, OnInit } from '@angular/core';
+import { DogService } from '../../services/dog.service';
+import { Dog } from '../../models/dog';
 import { DogResponse } from 'src/app/models/dogResponse';
 
 @Component({
 selector: 'app-dog',
   templateUrl: 'dog.component.html',
   styleUrls: ['dog.component.css'],
-  providers: [DogService]})
-export class DogComponent implements OnInit{
-  public dogImg : string;
-  public dogs : Array<string>;
-  public selectedBreed : string;
-  public isOpened : boolean;
+  providers: [DogService]
+})
+export class DogComponent implements OnInit {
+  public dogImg: string;
+  public dogs: Array<string>;
+  public selectedBreed: string;
+  public isOpened: boolean;
+  public breed: string;
 
   /**
   * @constructor
   *
-  * @description The default constructor of the  'Test.ClassWithMethodDeclaration' class.
+  * @description The default constructor of the  'DogComponent' class.
+  * @param _dogService The dog service.
   */
-  constructor (
-      private _dogService : DogService,
-    ){}
-  
-    ngOnInit() {     
-        this._getDogsList();
+  constructor (private _dogService: DogService) {}
+    ngOnInit() {
+        this.getDogsList();
     }
+
   /**
-  * Comment for method ´doSomething´.
-  * @param target  Comment for parameter ´target´.
-  * @returns       Comment for return value.
+  * The method to retrieve dogs breeds list.
   */
-  private _getDogsList (){
+  public getDogsList () {
     this._dogService.getDogsList().subscribe(
-        (data: DogResponse) => {
-            if(data.message){
+        (data:  DogResponse ) => {
+            if (data.message) {
                 this.dogs = data.message;
             }
         },
         error => console.log(error)
+
     );
   }
 /**
- * Comment for method ´doSomething´.
- * @param breed  Comment for parameter ´target´.
- * @returns       Comment for return value.
+ * The method to retrieve dog image.
+ * @param breed  the selected breed.
  */
-  public getDogImage(breed : string){
+  public getDogImage(breed: string) {
     this.selectedBreed = breed;
+    this.breed = null;
     this.isOpened = true;
     this._dogService.getRandomDogImg(breed).subscribe(
         (data: Dog) => {
-            if(data.message){
+            if (data.message) {
                 this.dogImg = data.message;
             }
         },
-        error => console.log(error)
-    ); 
+    error => console.log(error)
+    );
   }
 
   /**
- * Comment for method ´doSomething´.
+ * the method to close the dogs image layer.
  */
-  public closeGrid(){
-    this.isOpened=false;
-    this.selectedBreed=null;
+  public closeGrid() {
+    this.isOpened = false;
+    this.selectedBreed = null;
   }
-  
 }
+
