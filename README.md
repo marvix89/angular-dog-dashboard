@@ -19,13 +19,18 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 
 Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
-## Running unit tests
+## Running code quality analysis
 
 Run `ng lint` to execute the code quality analysis via [tslint](https://github.com/palantir/tslint).
 
 ## Continuous integration
 
 https://travis-ci.org/marvix89/dog-dashboard
+
+## Next steps
+If I had more time, I would consider the following options:
+
+- Integrate the app with docker in order to provide a more completed solution
 
 ## Further help
 
