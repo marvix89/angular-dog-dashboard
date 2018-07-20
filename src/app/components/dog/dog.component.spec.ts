@@ -9,6 +9,7 @@ import { FilterPipe } from '../../filters/filter.pipe';
 
 describe('DogComponent', () => {
   let component: DogComponent;
+   let _dogService;
    let fixture: ComponentFixture<DogComponent>;
    let getDogsListSpy;
 
@@ -16,7 +17,7 @@ describe('DogComponent', () => {
 
   beforeEach(() => {
     const dr: DogResponse = { status : 'success', message : ['afflenpinschen']};
-    const _dogService = jasmine.createSpyObj('DogService', ['getDogsList']);
+    _dogService = jasmine.createSpyObj('DogService', ['getDogsList']);
     getDogsListSpy = _dogService.getDogsList.and.returnValue(of(dr));
     TestBed.configureTestingModule({
       declarations: [
