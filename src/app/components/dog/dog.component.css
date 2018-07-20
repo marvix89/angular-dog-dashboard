@@ -29,28 +29,39 @@
   display: block;
 }
 .dog-container .dog-search{
-    width: 220px;
+    width: 190px;
     height: 40px;
     background: white;
     border-radius:40px;
-    color: #555;
+    color: rgb(123,123,123);;
     position: relative;
     padding-left: 15px;
+    padding-right: 35px;
     border:1px solid rgba(0,0,0,0.1);
     outline: none;
+    font-family: 'playfair';
 }
+.dog-container .fa-search{
+  position: absolute;
+  top: 15px;
+  right: 45px;
+}
+.dog-container .dog-search-container{
+  position: relative;
+}
+
 .dog-container .dog-item{
     width: 200px;
     height: 75px;
     float: left;
     background: white;
     text-align: center;
-    line-height: 3.8;
+    line-height: 4.2;
     margin: 0 20px 20px 0;
     cursor: pointer;
     box-shadow: 0 5px 15px rgba(0,0,0,0.08);
     color: rgb(123, 123, 123);
-    font-size: 20px;
+    font-size: 19px;
 
 }
 .dog-container .dog-item:hover{
@@ -84,18 +95,25 @@
     margin-right: auto
 }
 .dog-container .more-dogs{
-  margin-top: 200px;
+  margin-top: 250px;
   margin-left: 60px;
   float: left;
   cursor: pointer;
   color: rgb(123, 123, 123);
-  font-size: 30px;
+  font-size: 27px;
+  border: 1px solid rgba(0,0,0,0.03);
+  border-radius: 30px;
+  height: 70px;
+  outline: none;
+  padding: 15px;
+  background: white;
+  font-family: 'playfair'
 
 }
 .dog-container .close{
   position: absolute;
-  right: 10px;
-  top: 10px;
+  right: 20px;
+  top: 20px;
   cursor: pointer;
   color: rgb(123, 123, 123);
   font-size: 30px;
@@ -107,107 +125,60 @@
 
 /*=== Trigger  ===*/
 .animate {
-    -webkit-animation-duration: 1s;
-    animation-duration: 1s;
-    -webkit-animation-fill-mode: both;
-    animation-fill-mode: both;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
   }
-  /*=== FADE IN LEFT ===*/
-@-webkit-keyframes fadeInLeft {
-    from {
-      opacity: 0;
-      -webkit-transform: translate3d(-100%, 0, 0);
-      transform: translate3d(-100%, 0, 0);
-    }
-  
-    to {
-      opacity: 1;
-      -webkit-transform: none;
-      transform: none;
-    }
-  }
-  @keyframes fadeInLeft {
-    from {
-      opacity: 0;
-      -webkit-transform: translate3d(-100%, 0, 0);
-      transform: translate3d(-100%, 0, 0);
-    }
-  
-    to {
-      opacity: 1;
-      -webkit-transform: none;
-      transform: none;
-    }
-  }
-  
-  .fadeInLeft {
-    -webkit-animation-name: fadeInLeft;
-    animation-name: fadeInLeft;
-  }
+.fadeInLeft {
+  -webkit-animation-name: fadeInLeft;
+  animation-name: fadeInLeft;
+}
+
+.fadeInRight {
+  -webkit-animation-name: fadeInRight;
+  animation-name: fadeInRight;
+}
+.fadeOut {
+  -webkit-animation-name: fadeOut;
+  animation-name: fadeOut;
+}
+.fadeIn {
+  -webkit-animation-name: fadeIn;
+  animation-name: fadeIn;
+}
+
+/*==== KEYFRAMES ===*/
 
 /*==== FADE IN RIGHT ===*/
 @-webkit-keyframes fadeInRight {
-    from {
-      opacity: 0;
-      -webkit-transform: translate3d(100%, 0, 0);
-      transform: translate3d(100%, 0, 0);
-    }
-  
-    to {
-      opacity: 1;
-      -webkit-transform: none;
-      transform: none;
-    }
-  }
-  @keyframes fadeInRight {
-    from {
-      opacity: 0;
-      -webkit-transform: translate3d(100%, 0, 0);
-      transform: translate3d(100%, 0, 0);
-    }
-  
-    to {
-      opacity: 1;
-      -webkit-transform: none;
-      transform: none;
-    }
-  }
-  
-  .fadeInRight {
-    -webkit-animation-name: fadeInRight;
-    animation-name: fadeInRight;
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(100%, 0, 0);
+    transform: translate3d(100%, 0, 0);
   }
 
-   /*=== FADE OUT ===*/
-@-webkit-keyframes fadeOut {
-    from {
-      opacity: 1;
-      display: block;
-    }
-  
-    to {
-      opacity: 0;
-      display: none;
-    }
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
   }
-  @keyframes fadeOut {
-    from {
-      opacity: 1;
-      display: block;
-    }
-  
-    to {
-      opacity: 0;
-      display: none;
-    }
-  }
-  
-  .fadeOut {
-    -webkit-animation-name: fadeOut;
-    animation-name: fadeOut;
+}
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(100%, 0, 0);
+    transform: translate3d(100%, 0, 0);
   }
 
-    /*=== FADE IN  ===*/
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+/*=== FADE IN  ===*/
 @-webkit-keyframes fadeIn {
   from {
     opacity: 0;
@@ -227,7 +198,54 @@
   }
 }
 
-.fadeIn {
-  -webkit-animation-name: fadeIn;
-  animation-name: fadeIn;
+/*=== FADE OUT ===*/
+@-webkit-keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+/*=== FADE IN LEFT ===*/
+@-webkit-keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+/*=== MEDIA QUERIES ===*/
+@media (min-width: 768px) and (max-width: 1366px) {
+  .dog-container .more-dogs{
+    margin-top: 50px;
+  }
 }

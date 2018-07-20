@@ -8,7 +8,7 @@ import { FormsModule } from '@angular/forms';
 import { FilterPipe } from '../../filters/filter.pipe';
 
 describe('DogComponent', () => {
-  let component: DogComponent;
+   let dogComponent: DogComponent;
    let _dogService;
    let fixture: ComponentFixture<DogComponent>;
    let getDogsListSpy;
@@ -30,16 +30,36 @@ describe('DogComponent', () => {
       imports: [HttpClientTestingModule, FormsModule]
     }).compileComponents();
     fixture = TestBed.createComponent(DogComponent);
-    component = fixture.componentInstance;
+    dogComponent = fixture.componentInstance;
   });
-
 
   it('should create DogComponent', () => {
-    expect(component).toBeTruthy();
+    expect(dogComponent).toBeTruthy();
   });
 
+  it('should show current dogs breed number', () => {
+    dogComponent.getDogsList();
+    fixture.whenStable().then(() => {
+      fixture.detectChanges();
+      expect(dogComponent.dogs.length).toBe(1);
+    }).catch(function (reject) {
+      console.log(reject);
+    });
+  });
+
+  it('should show current dog image', () => {
+    dogComponent.getDogsList();
+    fixture.whenStable().then(() => {
+      fixture.detectChanges();
+      expect(dogComponent.dogImg).toBeDefined();
+    }).catch(function (reject) {
+      console.log(reject);
+    });
+  });
+
+
   afterEach(() => {
-    component = null;
+    dogComponent = null;
     _dogService = null;
   });
 

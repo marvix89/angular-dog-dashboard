@@ -1,7 +1,11 @@
 <div class="dog-container">
   <div class="side-bar">
       <h1> Dogs Dashboard</h1>
-      <input *ngIf="!isOpened" class="dog-search" type="text" placeholder="search for dog breed.." [(ngModel)]="breed" />
+      <div *ngIf="!isOpened" class="dog-search-container animate" [ngClass]="{'fadeOut': isOpened, 'fadeIn' :isOpened==false}">
+        <input class="dog-search" type="text" placeholder="search for dog breed.." [(ngModel)]="breed" />
+        <i class="fa fa-search"></i>
+      </div>  
+
   </div>
   <div class="dogs-grid">
     <div *ngIf="!isOpened" class="dogs-list animate" [ngClass]="{'fadeOut': isOpened, 'fadeIn' :isOpened==false}"> 
@@ -16,8 +20,8 @@
       <div class="dog-image-container">
           <img  [src]="dogImg"/>
       </div>
-      <label class="more-dogs" *ngIf="selectedBreed" (click)="getDogImage(selectedBreed)">show more dogs</label>
-      <label class="close" (click)="closeGrid()">x</label>
+      <button class="more-dogs" *ngIf="selectedBreed" (click)="getDogImage(selectedBreed)">show more dogs</button>
+      <i class="close fa fa-times" (click)="closeGrid()"></i>
     </div>  
   </div> 
 </div>

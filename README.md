@@ -21,7 +21,7 @@ Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.
 
 ## Running unit tests
 
-Run `ng lint` to execute the code quality analysis [tslint](https://github.com/palantir/tslint).
+Run `ng lint` to execute the code quality analysis via [tslint](https://github.com/palantir/tslint).
 
 ## Continuous integration
 
