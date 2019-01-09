@@ -1,251 +1,258 @@
 .dog-container{
-    position: relative;
+  position: relative;
 }
 .dog-container .side-bar{
-    text-align: center;
-    background: #f5f5f5;
-    z-index: 1000;
-    position: fixed;
-    width: 300px;
-    max-width: 100%;
-    height: 100%;
-    height: 100vh;
-    top: 0;
-    left: 0;
-    padding: 2em 0;
-    color: rgb(123, 123, 123);
+  text-align: center;
+  background: #f5f5f5;
+  z-index: 1000;
+  position: fixed;
+  width: 300px;
+  max-width: 100%;
+  height: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  padding: 2em 0;
+  color: rgb(123, 123, 123);
 }
 .dog-container .dogs-grid{
-    position: relative;
-    height: 100%;
-    margin-left: 292px;
-    z-index: 10;
+  position: relative;
+  height: 100%;
+  margin-left: 292px;
+  z-index: 10;
 }
 .dog-container .dogs-list{
-    margin-left: 20px;
+  margin-left: 20px;
+  margin-top: 20px;
 }
 
 .dog-container .dogs-list.fadeIn{
-  display: block;
+display: block;
 }
 .dog-container .dog-search{
-    width: 190px;
-    height: 40px;
-    background: white;
-    border-radius:40px;
-    color: rgb(123,123,123);;
-    position: relative;
-    padding-left: 15px;
-    padding-right: 35px;
-    border:1px solid rgba(0,0,0,0.1);
-    outline: none;
-    font-family: 'playfair';
+  width: 190px;
+  height: 40px;
+  background: white;
+  border-radius:40px;
+  color: rgb(123,123,123);;
+  position: relative;
+  padding-left: 15px;
+  padding-right: 35px;
+  border:1px solid rgba(0,0,0,0.1);
+  outline: none;
+  font-family: 'playfair';
+}
+.dog-container .dog-search:focus,
+.dog-container .dog-search:active{
+box-shadow: 0 0 16px #cecece;
 }
 .dog-container .fa-search{
-  position: absolute;
-  top: 15px;
-  right: 45px;
+position: absolute;
+top: 13px;
+right: 45px;
 }
 .dog-container .dog-search-container{
-  position: relative;
+position: relative;
 }
 
 .dog-container .dog-item{
-    width: 200px;
-    height: 75px;
-    float: left;
-    background: white;
-    text-align: center;
-    line-height: 4.2;
-    margin: 0 20px 20px 0;
-    cursor: pointer;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
-    color: rgb(123, 123, 123);
-    font-size: 19px;
-
+  width: 200px;
+  height: 75px;
+  float: left;
+  background: white;
+  text-align: center;
+  line-height: 4.2;
+  margin: 0 20px 20px 0;
+  cursor: pointer;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+  color: rgb(123, 123, 123);
+  font-size: 19px;
+  text-transform: capitalize;
 }
 .dog-container .dog-item:hover{
-    color: #333;
-    background-color:rgba(0,0,0,0.01);
+  color: #333;
+  background-color:rgba(0,0,0,0.02);
 }
 .dog-container .dog-details{
-    position: absolute;
-    height: auto;
-    min-height: 100vh;
-    width: 100%;
-    background: white;
-    z-index: 20;
-    background: rgba(0,0,0,0.01);
+  position: relative;
+  height: auto;
+  min-height: 100vh;
+  width: 100%;
+  background: white;
+  z-index: 20;
+  background: rgba(0,0,0,0.01);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
 .dog-container .dog-image-container{
-    margin-top: 30px;
-    margin-left: 30px;
-    text-align: center;
-    border: 7px dashed lightgray;
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-    width: 70%;
-    height: 500px;
-    float: left;
+  margin-top: 30px;
+  margin-left: 30px;
+  text-align: center;
+  border: 3px dashed lightgray;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  width: 70%;
+  height: 500px;
+  float: left;
 }
 .dog-container .dog-image-container img{
-    display: block;
-    margin-left: auto;
-    margin-right: auto
+  display: block;
+  margin-left: auto;
+  margin-right: auto
 }
 .dog-container .more-dogs{
-  margin-top: 250px;
-  margin-left: 60px;
-  float: left;
-  cursor: pointer;
-  color: rgb(123, 123, 123);
-  font-size: 27px;
-  border: 1px solid rgba(0,0,0,0.03);
-  border-radius: 30px;
-  height: 70px;
-  outline: none;
-  padding: 15px;
-  background: white;
-  font-family: 'playfair'
+margin: 0 20px;
+cursor: pointer;
+color: rgb(123, 123, 123);
+font-size: 27px;
+border: 1px solid rgba(0,0,0,0.03);
+border-radius: 30px;
+max-height: 100px;
+outline: none;
+padding: 15px;
+background: white;
+font-family: 'playfair'
 
 }
 .dog-container .close{
-  position: absolute;
-  right: 20px;
-  top: 20px;
-  cursor: pointer;
-  color: rgb(123, 123, 123);
-  font-size: 30px;
+position: absolute;
+right: 20px;
+top: 20px;
+cursor: pointer;
+color: rgb(123, 123, 123);
+font-size: 30px;
 }
 .dog-container .close:hover,
 .dog-container .more-dogs:hover{
-  color: #333;
+color: #333;
+background-color:rgba(0,0,0,0.01);
 }
 
 /*=== Trigger  ===*/
 .animate {
-  -webkit-animation-duration: 1s;
-  animation-duration: 1s;
-  -webkit-animation-fill-mode: both;
-  animation-fill-mode: both;
-  }
+-webkit-animation-duration: 1s;
+animation-duration: 1s;
+-webkit-animation-fill-mode: both;
+animation-fill-mode: both;
+}
 .fadeInLeft {
-  -webkit-animation-name: fadeInLeft;
-  animation-name: fadeInLeft;
+-webkit-animation-name: fadeInLeft;
+animation-name: fadeInLeft;
 }
 
 .fadeInRight {
-  -webkit-animation-name: fadeInRight;
-  animation-name: fadeInRight;
+-webkit-animation-name: fadeInRight;
+animation-name: fadeInRight;
 }
 .fadeOut {
-  -webkit-animation-name: fadeOut;
-  animation-name: fadeOut;
+-webkit-animation-name: fadeOut;
+animation-name: fadeOut;
 }
 .fadeIn {
-  -webkit-animation-name: fadeIn;
-  animation-name: fadeIn;
+-webkit-animation-name: fadeIn;
+animation-name: fadeIn;
 }
 
 /*==== KEYFRAMES ===*/
 
 /*==== FADE IN RIGHT ===*/
 @-webkit-keyframes fadeInRight {
-  from {
-    opacity: 0;
-    -webkit-transform: translate3d(100%, 0, 0);
-    transform: translate3d(100%, 0, 0);
-  }
+from {
+  opacity: 0;
+  -webkit-transform: translate3d(100%, 0, 0);
+  transform: translate3d(100%, 0, 0);
+}
 
-  to {
-    opacity: 1;
-    -webkit-transform: none;
-    transform: none;
-  }
+to {
+  opacity: 1;
+  -webkit-transform: none;
+  transform: none;
+}
 }
 @keyframes fadeInRight {
-  from {
-    opacity: 0;
-    -webkit-transform: translate3d(100%, 0, 0);
-    transform: translate3d(100%, 0, 0);
-  }
+from {
+  opacity: 0;
+  -webkit-transform: translate3d(100%, 0, 0);
+  transform: translate3d(100%, 0, 0);
+}
 
-  to {
-    opacity: 1;
-    -webkit-transform: none;
-    transform: none;
-  }
+to {
+  opacity: 1;
+  -webkit-transform: none;
+  transform: none;
+}
 }
 
 /*=== FADE IN  ===*/
 @-webkit-keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
+from {
+  opacity: 0;
+}
 
-  to {
-    opacity: 1;
-  }
+to {
+  opacity: 1;
+}
 }
 @keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
+from {
+  opacity: 0;
+}
 
-  to {
-    opacity: 1;
-  }
+to {
+  opacity: 1;
+}
 }
 
 /*=== FADE OUT ===*/
 @-webkit-keyframes fadeOut {
-  from {
-    opacity: 1;
-  }
+from {
+  opacity: 1;
+}
 
-  to {
-    opacity: 0;
-  }
+to {
+  opacity: 0;
+}
 }
 @keyframes fadeOut {
-  from {
-    opacity: 1;
-  }
-  to {
-    opacity: 0;
-  }
+from {
+  opacity: 1;
+}
+to {
+  opacity: 0;
+}
 }
 
 /*=== FADE IN LEFT ===*/
 @-webkit-keyframes fadeInLeft {
-  from {
-    opacity: 0;
-    -webkit-transform: translate3d(-100%, 0, 0);
-    transform: translate3d(-100%, 0, 0);
-  }
-  to {
-    opacity: 1;
-    -webkit-transform: none;
-    transform: none;
-  }
+from {
+  opacity: 0;
+  -webkit-transform: translate3d(-100%, 0, 0);
+  transform: translate3d(-100%, 0, 0);
+}
+to {
+  opacity: 1;
+  -webkit-transform: none;
+  transform: none;
+}
 }
 @keyframes fadeInLeft {
-  from {
-    opacity: 0;
-    -webkit-transform: translate3d(-100%, 0, 0);
-    transform: translate3d(-100%, 0, 0);
-  }
-  to {
-    opacity: 1;
-    -webkit-transform: none;
-    transform: none;
-  }
+from {
+  opacity: 0;
+  -webkit-transform: translate3d(-100%, 0, 0);
+  transform: translate3d(-100%, 0, 0);
+}
+to {
+  opacity: 1;
+  -webkit-transform: none;
+  transform: none;
+}
 }
 
 /*=== MEDIA QUERIES ===*/
 @media (min-width: 768px) and (max-width: 1366px) {
-  .dog-container .more-dogs{
-    margin-top: 50px;
-  }
+.dog-container .more-dogs{
+  margin-top: 50px;
+}
 }

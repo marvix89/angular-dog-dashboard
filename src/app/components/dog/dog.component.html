@@ -1,15 +1,15 @@
 <div class="dog-container">
   <div class="side-bar">
-      <h1> Dogs Dashboard</h1>
-      <div *ngIf="!isOpened" class="dog-search-container animate" [ngClass]="{'fadeOut': isOpened, 'fadeIn' :isOpened==false}">
-        <input class="dog-search" type="text" placeholder="search for dog breed.." [(ngModel)]="breed" />
-        <i class="fa fa-search"></i>
-      </div>  
+    <h1> Dogs Dashboard</h1>
+    <div class="dog-search-container animate">
+      <input class="dog-search" type="text" placeholder="search for dog breed.." [(ngModel)]="breed" (ngModelChange)="searchDog()" />
+      <i class="fa fa-search"></i>
+    </div>
 
   </div>
   <div class="dogs-grid">
-    <div *ngIf="!isOpened" class="dogs-list animate" [ngClass]="{'fadeOut': isOpened, 'fadeIn' :isOpened==false}"> 
-      <div (click) = "getDogImage(dog)" class="dog-item" *ngFor='let dog of dogs | filter : breed'>
+    <div *ngIf="!isOpened" class="dogs-list animate" [ngClass]="{'fadeOut': isOpened, 'fadeIn' :isOpened==false}">
+      <div (click)="getDogImage(dog)" class="dog-item" *ngFor='let dog of dogs | filter : breed'>
         {{dog}}
       </div>
       <div *ngIf="dogs && (dogs | filter : breed).length===0" class="dog-item">
@@ -18,10 +18,10 @@
     </div>
     <div *ngIf="dogImg && isOpened" class="dog-details animate" [ngClass]="{'fadeOut': isOpened==false, 'fadeInLeft' :isOpened}">
       <div class="dog-image-container">
-          <img  [src]="dogImg"/>
+        <img [src]="dogImg" />
       </div>
-      <button class="more-dogs" *ngIf="selectedBreed" (click)="getDogImage(selectedBreed)">show more dogs</button>
+      <button class="more-dogs" *ngIf="selectedBreed" (click)="getDogImage(selectedBreed)">Show more {{selectedBreed}}</button>
       <i class="close fa fa-times" (click)="closeGrid()"></i>
-    </div>  
-  </div> 
+    </div>
+  </div>
 </div>
