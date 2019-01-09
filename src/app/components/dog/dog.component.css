@@ -103,16 +103,12 @@ position: relative;
   margin-right: auto
 }
 .dog-container .more-dogs{
-/* margin-top: 250px; */
-/* margin-left: 60px; */
 margin: 0 20px;
-/* float: left; */
 cursor: pointer;
 color: rgb(123, 123, 123);
 font-size: 27px;
 border: 1px solid rgba(0,0,0,0.03);
 border-radius: 30px;
-/* height: 70px; */
 max-height: 100px;
 outline: none;
 padding: 15px;
