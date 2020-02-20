@@ -39,7 +39,7 @@ https://travis-ci.org/marvix89/dog-dashboard
 ## Next steps
 If I had more time, I would consider the following options:
 
-- Integrate the app with docker in order to provide a more completed solution
+- Integrate the app with docker in order to provide a more complete solution
 
 ## Further help
 
