@@ -20,7 +20,7 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 
 Visit https://mb-dog-dashboard.herokuapp.com/ to see live the app.
 
-Heroku is used for continuos build application, it allows to automatically run build on every push on the master.
+Heroku is used for continuos deployment of the application, it allows to automatically run build on every push on the master.
 
 ## Running unit tests
 
